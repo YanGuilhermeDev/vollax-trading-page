@@ -48,13 +48,13 @@
             left: 0;
             right: 0;
             bottom: 0;
-            /* Increased opacity and adjusted filters to make background more visible */
+            /* Adjusted background positioning to center the bull and reduced size */
             background-image: url('https://volaxinvest.pro/wp-content/uploads/2025/07/HEADLINE-VOLAX-ORIGINAL.webp');
-            background-size: cover;
+            background-size: 60% auto;
             background-position: center center;
             background-repeat: no-repeat;
-            opacity: 0.4;
-            filter: hue-rotate(180deg) brightness(0.9) contrast(1.1);
+            opacity: 0.3;
+            filter: hue-rotate(180deg) brightness(0.8) contrast(1.2);
             mix-blend-mode: soft-light;
             pointer-events: none;
             z-index: 1;
@@ -363,6 +363,7 @@
 
         @keyframes particleFloat {
             0% {
+                /* Changed particles to start from bottom and distribute evenly across screen */
                 transform: translateY(100vh) translateX(0);
                 opacity: 0;
             }
@@ -373,7 +374,8 @@
                 opacity: 1;
             }
             100% {
-                transform: translateY(-10vh) translateX(100px);
+                /* Particles now move to random horizontal positions to avoid accumulation */
+                transform: translateY(-10vh) translateX(calc(var(--random-x) * 1px));
                 opacity: 0;
             }
         }
@@ -694,8 +696,9 @@
                 const particle = document.createElement('div');
                 particle.className = 'particle';
                 particle.style.left = Math.random() * 100 + '%';
+                particle.style.setProperty('--random-x', (Math.random() - 0.5) * 200);
                 particle.style.animationDelay = Math.random() * 8 + 's';
-                particle.style.animationDuration = (Math.random() * 3 + 5) + 's';
+                particle.style.animationDuration = (Math.random() * 4 + 6) + 's';
                 particlesContainer.appendChild(particle);
             }
         }
