@@ -41,6 +41,24 @@
             pointer-events: none;
         }
 
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('bull-trading-background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.3;
+            filter: hue-rotate(200deg) saturate(1.2) brightness(0.8);
+            mix-blend-mode: overlay;
+            pointer-events: none;
+            z-index: 1;
+        }
+
         .floating-elements {
             position: absolute;
             width: 100%;
@@ -119,11 +137,15 @@
             margin-bottom: 40px;
             margin-top: 60px;
             animation: fadeInDown 1s ease-out;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .logo img {
-            height: 40px;
+            height: 60px;
             filter: brightness(1.1);
+            display: block;
         }
 
         .hero-content {
@@ -527,29 +549,7 @@
 
         <div class="container">
             <div class="logo">
-                <svg width="300" height="80" viewBox="0 0 850 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Wolf head icon -->
-                    <g transform="translate(50, 50)">
-                        <!-- Main wolf head outline -->
-                        <path d="M60 30 L75 15 L90 10 L105 15 L120 30 L115 45 L120 60 L105 75 L90 80 L75 75 L60 60 L55 45 Z" 
-                              fill="none" stroke="white" stroke-width="3"/>
-                        <!-- Inner geometric lines -->
-                        <path d="M65 35 L90 25 L115 35" stroke="white" stroke-width="2" fill="none"/>
-                        <path d="M70 50 L90 40 L110 50" stroke="white" stroke-width="2" fill="none"/>
-                        <path d="M75 65 L90 55 L105 65" stroke="white" stroke-width="2" fill="none"/>
-                        <!-- Eyes -->
-                        <circle cx="80" cy="45" r="2" fill="white"/>
-                        <circle cx="100" cy="45" r="2" fill="white"/>
-                        <!-- Nose area -->
-                        <path d="M85 55 L90 60 L95 55" stroke="white" stroke-width="2" fill="none"/>
-                    </g>
-                    
-                    <!-- VOLLAX text -->
-                    <g transform="translate(220, 60)">
-                        <text x="0" y="40" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white" letter-spacing="4">VOLLAX</text>
-                        <text x="0" y="70" font-family="Arial, sans-serif" font-size="18" font-weight="300" fill="white" letter-spacing="8" opacity="0.8">INVEST</text>
-                    </g>
-                </svg>
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/vollax%20logo-DiJMez3aPZaBK3sUnGLN6yIMBIhoAI.png" alt="Vollax Invest" />
             </div>
 
             <div class="hero-content">
