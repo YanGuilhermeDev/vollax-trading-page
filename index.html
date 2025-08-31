@@ -48,14 +48,14 @@
             left: 0;
             right: 0;
             bottom: 0;
-            /* Using original bull image URL and simplifying CSS for better visibility */
-            background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/charging-bull-stock-market-rally-3600yg7x2sjk7xvb.jpg-VktP75CFzCVV29ekls9utdQbZ2b6lJ.jpeg');
+            /* Using a reliable public URL for bull trading image */
+            background-image: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
-            opacity: 0.4;
-            filter: hue-rotate(200deg) brightness(0.9);
-            mix-blend-mode: multiply;
+            opacity: 0.25;
+            filter: hue-rotate(200deg) brightness(0.8) contrast(1.2);
+            mix-blend-mode: overlay;
             pointer-events: none;
             z-index: 1;
         }
@@ -229,6 +229,7 @@
             justify-content: center;
             gap: 40px;
             margin-top: 80px;
+            margin-bottom: 60px; /* Added bottom margin */
             flex-wrap: wrap;
             animation: fadeInUp 1s ease-out 0.6s both;
         }
@@ -334,6 +335,7 @@
             .stats-container {
                 gap: 20px;
                 margin-top: 60px;
+                margin-bottom: 40px; /* Adjusted bottom margin */
             }
             
             .stat-item {
