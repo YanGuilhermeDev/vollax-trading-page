@@ -164,7 +164,8 @@
         }
 
         .hero-title .highlight {
-            background: linear-gradient(135deg, #60a5fa, #a78bfa, #34d399);
+            /* Simplified gradient to only 3 pure blue/cyan colors to eliminate any purple tones */
+            background: linear-gradient(135deg, #3b82f6, #06b6d4, #0ea5e9);
             background-size: 300% 300%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -435,9 +436,9 @@
             text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
         }
 
-        /* Added styling for Vollax brand name with gradient color */
+        /* Removed yellow/golden colors from brand name gradient, keeping only blue tones */
         .features-title .brand-name {
-            background: linear-gradient(135deg, #60a5fa, #34d399, #f59e0b);
+            background: linear-gradient(135deg, #60a5fa, #34d399, #06b6d4);
             background-size: 300% 300%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -447,16 +448,17 @@
             letter-spacing: 0.5px;
         }
 
+        /* Removed yellow/golden colors from highlight gradient, keeping only blue and cyan tones */
         .features-title .highlight {
-            background: linear-gradient(135deg, #60a5fa, #a78bfa, #34d399, #f59e0b); /* Added golden color */
-            background-size: 400% 400%; /* Larger background for smoother animation */
+            background: linear-gradient(135deg, #60a5fa, #a78bfa, #34d399, #06b6d4);
+            background-size: 400% 400%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            animation: gradientShift 3s ease-in-out infinite; /* Faster animation */
-            text-shadow: 0 0 30px rgba(96, 165, 250, 0.3); /* Added glow effect */
-            font-weight: 900; /* Bolder text */
-            letter-spacing: 1px; /* Added letter spacing */
+            animation: gradientShift 3s ease-in-out infinite;
+            text-shadow: 0 0 30px rgba(96, 165, 250, 0.3);
+            font-weight: 900;
+            letter-spacing: 1px;
         }
 
         @keyframes gradientShift {
@@ -655,7 +657,7 @@
                     <div class="feature-icon">
                         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M3 18v-6a9 9 0 0 1 18 0v6"/>
-                            <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>
+                            <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/>
                         </svg>
                     </div>
                     <h3 class="feature-title">Suporte 24/7</h3>
@@ -669,6 +671,8 @@
                         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
                             <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                            <path d="M21 19a2 2 0 0 1-2 2h1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2H21z"/>
+                            <path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>
                         </svg>
                     </div>
                     <h3 class="feature-title">Indicadores de negociação</h3>
