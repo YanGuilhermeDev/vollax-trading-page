@@ -441,12 +441,15 @@
         }
 
         .features-title .highlight {
-            background: linear-gradient(135deg, #60a5fa, #a78bfa, #34d399);
-            background-size: 300% 300%;
+            background: linear-gradient(135deg, #60a5fa, #a78bfa, #34d399, #f59e0b); /* Added golden color */
+            background-size: 400% 400%; /* Larger background for smoother animation */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            animation: gradientShift 4s ease-in-out infinite;
+            animation: gradientShift 3s ease-in-out infinite; /* Faster animation */
+            text-shadow: 0 0 30px rgba(96, 165, 250, 0.3); /* Added glow effect */
+            font-weight: 900; /* Bolder text */
+            letter-spacing: 1px; /* Added letter spacing */
         }
 
         .features-grid {
@@ -460,12 +463,12 @@
         }
 
         .feature-card {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(15, 23, 42, 0.4); /* Changed from rgba(255, 255, 255, 0.05) to darker background */
             border-radius: 20px;
             padding: 40px 30px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
+            backdrop-filter: blur(15px); /* Increased blur for better glass effect */
+            border: 1px solid rgba(255, 255, 255, 0.08); /* Slightly more transparent border */
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Smoother transition curve */
             cursor: pointer;
             position: relative;
             overflow: hidden;
@@ -478,15 +481,15 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            transition: left 0.6s ease;
+            background: linear-gradient(90deg, transparent, rgba(96, 165, 250, 0.15), transparent); /* Changed to blue shimmer */
+            transition: left 0.8s ease; /* Slower shimmer effect */
         }
 
         .feature-card:hover {
-            transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(96, 165, 250, 0.4);
-            box-shadow: 0 20px 40px rgba(30, 64, 175, 0.3);
+            transform: translateY(-15px) scale(1.02); /* Added scale effect */
+            background: rgba(15, 23, 42, 0.6); /* Darker hover background */
+            border: 1px solid rgba(96, 165, 250, 0.5); /* Brighter border on hover */
+            box-shadow: 0 25px 50px rgba(30, 64, 175, 0.4), 0 0 0 1px rgba(96, 165, 250, 0.2); /* Enhanced shadow with glow */
         }
 
         .feature-card:hover::before {
@@ -494,14 +497,23 @@
         }
 
         .feature-card:hover .feature-icon {
-            color: #34d399;
-            transform: scale(1.1);
+            color: #34d399; /* Green color on hover */
+            transform: scale(1.2) rotate(5deg); /* Added rotation */
+        }
+
+        .feature-card:hover .feature-title {
+            color: #60a5fa; /* Blue title on hover */
+            transform: translateY(-2px); /* Slight lift effect */
+        }
+
+        .feature-card:hover .feature-description {
+            color: rgba(255, 255, 255, 0.95); /* Brighter text on hover */
         }
 
         .feature-icon {
             color: #60a5fa;
             margin-bottom: 20px;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Smoother transition */
         }
 
         .feature-title {
@@ -510,12 +522,14 @@
             color: white;
             margin-bottom: 15px;
             line-height: 1.3;
+            transition: all 0.3s ease; /* Added transition for hover effect */
         }
 
         .feature-description {
-            color: rgba(255, 255, 255, 0.8);
+            color: rgba(255, 255, 255, 0.75); /* Slightly more transparent */
             line-height: 1.6;
             font-size: 1rem;
+            transition: all 0.3s ease; /* Added transition for hover effect */
         }
 
         @media (max-width: 768px) {
@@ -593,7 +607,7 @@
     <section class="features-section">
         <div class="container">
             <h2 class="features-title">
-                Vollax. A corretora que valoriza seu <span class="highlight">TRADER!</span>
+                Vollax<br>A corretora que valoriza seu <span class="highlight">TRADER!</span>
             </h2>
             
             <div class="features-grid">
